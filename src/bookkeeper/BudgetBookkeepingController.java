@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class BudgetBookkeepingController implements Initializable {
@@ -60,7 +61,7 @@ public class BudgetBookkeepingController implements Initializable {
     }
     
 
-            
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
