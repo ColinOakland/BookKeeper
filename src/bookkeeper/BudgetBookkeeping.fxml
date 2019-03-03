@@ -144,7 +144,7 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="57.0" prefWidth="311.0" style="-fx-background-color: #CAE5FF;" text="500.00" textFill="#cc6600">
+                  <Label fx:id="balance" alignment="CENTER" prefHeight="57.0" prefWidth="311.0" style="-fx-background-color: #CAE5FF;" text="0.00" textFill="#cc6600">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
@@ -152,6 +152,7 @@
                         <Font name="System Bold Italic" size="32.0" />
                      </font>
                   </Label>
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" />
                </children>
             </VBox>
             <VBox layoutX="10.0" layoutY="20.0" prefHeight="109.0" prefWidth="315.0" style="-fx-border-radius: 50;">

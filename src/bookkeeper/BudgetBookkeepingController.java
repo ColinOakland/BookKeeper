@@ -13,6 +13,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDate;
 
 public class BudgetBookkeepingController implements Initializable {
     
@@ -23,6 +29,18 @@ public class BudgetBookkeepingController implements Initializable {
     private Button addCash;
     @FXML
     private Button addExpense;
+    
+    @FXML
+    private Label balance;
+    
+    @FXML
+    private Button updateButton;
+    
+    @FXML
+    private void updateButtonAction(ActionEvent event) throws IOException
+    {
+        updateLabel();
+    }
     
     @FXML
     private void addCashAction(ActionEvent event) throws IOException
@@ -60,12 +78,41 @@ public class BudgetBookkeepingController implements Initializable {
         stage.show();
     }
     
-
+    @FXML
+    private void updateLabel()
+    {
+        FileReader reader;
+        double myMoney=0.0;
+        String [] holder;
+        Path pathToFile = Paths.get("record.csv");
+        try
+        {
+        BufferedReader br;
+        br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII);
+        String line;
+        while( (line=br.readLine())!=null)
+        {
+            holder = line.split(",");
+            myMoney += Double.parseDouble(holder[2]);
+            System.out.println(holder[2]);
+        }
+        
+        balance.setText(Double.toString(myMoney));
+        br.close();
+        }
+        catch(IOException e)
+        {
+            System.out.println("File doesn't exist");
+        }
+    }    
+        
+   
 
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    public void initialize(URL url, ResourceBundle rb)
+    {
+    updateLabel();
+    }
     
 }

@@ -50,7 +50,7 @@ public class AddExpensesWindowController implements Initializable {
         
         
         //write the data to a csv file which is in the root directory as record.txt
-        writer.append("expense," + purpose + "," + howMuch + "," + expenseDate + ","+category+"\n");
+        writer.append("expense," + purpose + "," +"-" +howMuch + "," + expenseDate + ","+category+"\n");
         
         //close the file
         writer.close();
