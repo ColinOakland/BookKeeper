@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #bfbfbf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="budjetbookkeeper.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="111.0" prefWidth="750.0" style="-fx-background-color: #262626;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="104.0" layoutY="14.0" text="UserName" textFill="#ededed" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="557.2" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="55.0" text="Email" textFill="#ededed" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="557.2">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="573.0" layoutY="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #262626;" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="573.0" layoutY="53.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #262626;" text="         LogOut" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="17.0" fitWidth="26.0" layoutX="601.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/log%20out.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="113.0" prefHeight="483.0" prefWidth="212.0" style="-fx-background-color: #cccccc;" AnchorPane.bottomAnchor="3.8000000000000114" AnchorPane.topAnchor="113.00000000000006">
+         <children>
+            <VBox layoutX="-1.0" layoutY="16.0" prefHeight="470.0" prefWidth="206.0" spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="Balance" textAlignment="CENTER" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/balance.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="balanceLabel" layoutX="20.0" layoutY="20.0" prefHeight="38.0" prefWidth="185.0" style="-fx-background-color: #3366ff;" text="balanceLabel" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="20.0" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="  Bills" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/bills.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="billsLabel" layoutX="20.0" layoutY="58.0" prefHeight="38.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="billsLabel" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="106.0" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="Food/Drinks" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/food.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="foodLabel" layoutX="20.0" layoutY="148.0" prefHeight="38.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="foodLabel" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="197.0" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text=" Technology" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/tech2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="techLabel" layoutX="20.0" layoutY="240.0" prefHeight="38.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="technologyLabel" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="288.0" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text=" Other" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="otherLabel" layoutX="20.0" layoutY="380.0" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: #3366ff;" text="otherLabel" textAlignment="CENTER" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="230.0" layoutY="149.0" prefHeight="188.0" prefWidth="511.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <TextField fx:id="addCashSource" layoutX="122.0" layoutY="8.0" prefHeight="27.0" prefWidth="253.0" style="-fx-background-color: #e6e6e6;" />
+            <Label layoutX="14.0" layoutY="12.0" prefHeight="18.0" prefWidth="152.0" text="Source" textOverrun="CLIP" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="345.2" AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="54.0" prefHeight="27.0" prefWidth="89.0" text="How Much">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addCashHowMuch" layoutX="121.0" layoutY="54.0" prefHeight="27.0" prefWidth="254.0" style="-fx-background-color: #e6e6e6;" />
+            <Label layoutX="13.0" layoutY="101.0" prefHeight="27.0" prefWidth="77.0" text="Date" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="addCashDate" layoutX="121.0" layoutY="101.0" prefHeight="26.0" prefWidth="254.0" style="-fx-background-color: #e6e6e6;" />
+            <Button fx:id="addCashDoneButton" layoutX="211.0" layoutY="139.0" mnemonicParsing="false" onAction="#addCashDoneButtonAction" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #336600; -fx-background-radius: 25;" text="DONE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="230.0" layoutY="376.0" prefHeight="220.0" prefWidth="511.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="152.0" text="Purpose" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addExpensesPurpose" layoutX="121.0" layoutY="10.0" prefHeight="27.0" prefWidth="253.0" style="-fx-background-color: #e6e6e6;" />
+            <Label layoutX="14.0" layoutY="54.0" prefHeight="18.0" prefWidth="152.0" text="How Much" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addExpensesHowMuch" layoutX="121.0" layoutY="50.0" prefHeight="27.0" prefWidth="253.0" style="-fx-background-color: #e6e6e6;" />
+            <Label layoutX="14.0" layoutY="85.0" prefHeight="18.0" prefWidth="152.0" text="Category" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radioBills" layoutX="121.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="78.0" text="Bills">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioFood" layoutX="121.0" layoutY="105.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="117.0" text="Food/Drinks">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioTech" layoutX="271.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="Technology">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="RadioOther" layoutX="271.0" layoutY="105.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="Other">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <DatePicker fx:id="addExpensesDate" layoutX="121.0" layoutY="134.0" prefHeight="27.0" prefWidth="126.0" />
+            <Label layoutX="14.0" layoutY="134.0" prefHeight="27.0" prefWidth="77.0" text="Date" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="addExpensesDoneButton" layoutX="211.0" layoutY="174.0" mnemonicParsing="false" onAction="#addExpensesDoneButtonAction" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #cc0000; -fx-background-radius: 25;" text="DONE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="388.0" layoutY="111.0" prefHeight="38.0" prefWidth="138.0" text="ADD CASH">
+         <font>
+            <Font name="Book Antiqua Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="335.0" prefHeight="38.0" prefWidth="166.0" text="ADD EXPENSES">
+         <font>
+            <Font name="Book Antiqua Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
